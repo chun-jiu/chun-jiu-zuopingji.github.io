@@ -8,16 +8,16 @@
 // ============================================================
 const ARTWORKS = [
   // ---- 插画 (30件: 壁纸横图优先) ----
-  { file: '插画/1 (1).png', title: '壁纸插画 01', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (22).png', title: '壁纸插画 02', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (32).png', title: '壁纸插画 03', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (33).png', title: '壁纸插画 04', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (34).png', title: '壁纸插画 05', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (35).png', title: '壁纸插画 06', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (39).png', title: '壁纸插画 07', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (41).png', title: '壁纸插画 08', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (56).png', title: '壁纸插画 09', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (57).png', title: '壁纸插画 10', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (1).png', title: '壁纸插画 01', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (22).png', title: '壁纸插画 02', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (32).png', title: '壁纸插画 03', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (33).png', title: '壁纸插画 04', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (34).png', title: '壁纸插画 05', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (35).png', title: '壁纸插画 06', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (39).png', title: '壁纸插画 07', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (41).png', title: '壁纸插画 08', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (56).png', title: '壁纸插画 09', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (57).png', title: '壁纸插画 10', cat: 'illustration', catLabel: '插画', wallpaper: true },
   { file: '插画/1 (1).gif', title: '插画作品 11', cat: 'illustration', catLabel: '插画' },
   { file: '插画/1 (30).png', title: '插画作品 12', cat: 'illustration', catLabel: '插画' },
   { file: '插画/1 (31).png', title: '插画作品 13', cat: 'illustration', catLabel: '插画' },
@@ -167,10 +167,12 @@ function getFilteredWorks() {
 
 function createItemHTML(work, idx) {
   const isGif = work.file.endsWith('.gif');
-  // GIF 保持原图（动画），其他用响应式缩略图
+  // GIF 保持原图（动画），壁纸用600px缩略图，其他用响应式缩略图
   var imgTag;
   if (isGif) {
     imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
+  } else if (work.wallpaper) {
+    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 200w, ' + getThumbPath(work) + ' 400w, images/thumbnails-lg/' + work.file + ' 600w" sizes="(max-width: 480px) 400px, (max-width: 768px) 600px, 600px" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else {
     imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 144w, ' + getThumbPath(work) + ' 300w" sizes="(max-width: 768px) 144px, 300px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
