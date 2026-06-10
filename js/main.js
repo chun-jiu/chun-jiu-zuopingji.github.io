@@ -151,7 +151,7 @@ function renderCategoryBar() {
 // ============================================================
 // 4. 画廊 (分批加载)
 // ============================================================
-const BATCH_SIZE = 20;
+const BATCH_SIZE = 6;
 let renderedCount = 0;
 let displayIndex = 0;
 let allFiltered = [];
@@ -172,7 +172,7 @@ function createItemHTML(work, idx) {
     (isVideo ? ' data-video="images/' + work.video + '"' : '') + '>' +
     (isGif && work.cat !== 'illustration' ? '<span class="gif-badge">GIF</span>' : '') +
     '<span class="cat-badge">' + work.catLabel + '</span>' +
-    '<img src="' + imgPath + '" alt="' + work.title + '" loading="lazy">' +
+    '<img src="' + imgPath + '" alt="' + work.title + '" loading="lazy" decoding="async">' +
     '<div class="gallery-item-overlay">' +
     '<div class="gallery-item-title">' + work.title + '</div>' +
     '<div class="gallery-item-cat">' + work.catLabel + (isVideo ? ' ▶' : '') + '</div>' +
@@ -255,7 +255,7 @@ function onScrollCheck() {
     const grid = document.getElementById('galleryGrid');
     if (!grid || !grid.lastElementChild) return;
     const rect = grid.lastElementChild.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 800) loadBatch();
+    if (rect.top < window.innerHeight + 400) loadBatch();
   }, 100);
 }
 
@@ -295,7 +295,7 @@ function renderGallery() {
     const lastItem = grid.lastElementChild;
     if (lastItem) {
       const rect = lastItem.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 200 && renderedCount < allFiltered.length) {
+      if (rect.top < window.innerHeight + 100 && renderedCount < allFiltered.length) {
         loadBatch();
       }
     }
@@ -320,7 +320,7 @@ function observeItems() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 100px 0px' });
 
   document.querySelectorAll('.gallery-item.fade-in:not(.visible)').forEach(function(el) {
     observer.observe(el);

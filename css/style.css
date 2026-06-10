@@ -416,6 +416,8 @@ ul {
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
   transform-style: preserve-3d;
   perspective: 800px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 200px;
 }
 
 .gallery-item:hover {
