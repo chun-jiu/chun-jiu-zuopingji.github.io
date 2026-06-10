@@ -5,3 +5,4 @@ node_modules/
 *.pdf
 *pdf.html*
 index-pdf*
+node_modules/
