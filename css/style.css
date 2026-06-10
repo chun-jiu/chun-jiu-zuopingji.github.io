@@ -972,6 +972,7 @@ ul {
 .contact-card.bilibili:hover { border-color: var(--bilibili-color); box-shadow: 0 6px 20px rgba(0,174,236,0.12); }
 .contact-card.mihuashi:hover { border-color: var(--mihuashi-color); box-shadow: 0 6px 20px rgba(240,131,58,0.12); }
 .contact-card.qq:hover { border-color: var(--qq-color); box-shadow: 0 6px 20px rgba(18,183,245,0.12); }
+.contact-card.wechat:hover { border-color: #07c160; box-shadow: 0 6px 20px rgba(7,193,96,0.12); }
 .contact-card.email:hover { border-color: var(--email-color); box-shadow: 0 6px 20px rgba(76,175,132,0.12); }
 
 .contact-icon {
