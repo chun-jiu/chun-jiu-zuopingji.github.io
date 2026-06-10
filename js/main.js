@@ -88,8 +88,6 @@ const ARTWORKS = [
   { file: '制品/4 杂项/1 (2).jpg', title: '杂项 02', cat: 'product', catLabel: '制品', subcat: 'other' },
   { file: '制品/4 杂项/1 (3).jpg', title: '杂项 03', cat: 'product', catLabel: '制品', subcat: 'other' },
 
-  // ---- 视频 (1件) ----
-  { file: '视频/01-cover.png', title: '视频作品 01', cat: 'video', catLabel: '视频', video: '视频/1.mp4' }
 ];
 
 function getImgPath(work) {
@@ -103,8 +101,8 @@ function getThumbPath(work) {
 // ============================================================
 // 2. 分类 & 状态
 // ============================================================
-const CATEGORIES = ['illustration', 'product', 'gif', 'video'];
-const CAT_LABELS = { illustration: '插画', product: '制品', gif: '动图', video: '视频' };
+const CATEGORIES = ['illustration', 'product', 'gif'];
+const CAT_LABELS = { illustration: '插画', product: '制品', gif: '动图' };
 let currentCat = 'illustration';
 let lightboxIndex = -1;
 let filteredWorks = [];
@@ -169,7 +167,6 @@ function getFilteredWorks() {
 
 function createItemHTML(work, idx) {
   const isGif = work.file.endsWith('.gif');
-  const isVideo = !!work.video;
   // GIF 保持原图（动画），其他用响应式缩略图
   var imgTag;
   if (isGif) {
@@ -178,14 +175,13 @@ function createItemHTML(work, idx) {
     imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 144w, ' + getThumbPath(work) + ' 300w" sizes="(max-width: 768px) 144px, 300px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
   return '<div class="gallery-item fade-in" data-index="' + idx +
-    '" data-cat="' + work.cat + '"' +
-    (isVideo ? ' data-video="images/' + work.video + '"' : '') + '>' +
+    '" data-cat="' + work.cat + '">' +
     (isGif && work.cat !== 'illustration' ? '<span class="gif-badge">GIF</span>' : '') +
     '<span class="cat-badge">' + work.catLabel + '</span>' +
     imgTag +
     '<div class="gallery-item-overlay">' +
     '<div class="gallery-item-title">' + work.title + '</div>' +
-    '<div class="gallery-item-cat">' + work.catLabel + (isVideo ? ' ▶' : '') + '</div>' +
+    '<div class="gallery-item-cat">' + work.catLabel + '</div>' +
     '</div></div>';
 }
 
@@ -288,9 +284,7 @@ function renderGallery() {
 
   // Adjust column class based on category
   grid.classList.remove('cols-3', 'cols-4', 'cols-5', 'cols-center', 'cols-grid');
-  if (currentCat === 'video') {
-    grid.classList.add('cols-center');
-  } else if (currentCat === 'product') {
+  if (currentCat === 'product') {
     grid.classList.add('cols-4');
   } else if (currentCat === 'gif') {
     grid.classList.add('cols-4');
@@ -349,12 +343,6 @@ function openLightbox(index) {
   if (index < 0 || index >= filteredWorks.length) return;
   const work = filteredWorks[index];
 
-  // 视频作品走视频灯箱
-  if (work.video) {
-    openVideoLightbox(index);
-    return;
-  }
-
   lightboxIndex = index;
   var lb = document.getElementById('lightbox');
   lb.classList.add('open');
@@ -390,45 +378,13 @@ function closeLightbox() {
 function lightboxNext() {
   if (filteredWorks.length === 0) return;
   lightboxIndex = (lightboxIndex + 1) % filteredWorks.length;
-  // Skip video items in image lightbox
-  while (filteredWorks[lightboxIndex].video) {
-    lightboxIndex = (lightboxIndex + 1) % filteredWorks.length;
-  }
   updateLightboxImage();
 }
 
 function lightboxPrev() {
   if (filteredWorks.length === 0) return;
   lightboxIndex = (lightboxIndex - 1 + filteredWorks.length) % filteredWorks.length;
-  while (filteredWorks[lightboxIndex].video) {
-    lightboxIndex = (lightboxIndex - 1 + filteredWorks.length) % filteredWorks.length;
-  }
   updateLightboxImage();
-}
-
-// 视频灯箱
-function openVideoLightbox(index) {
-  const work = filteredWorks[index];
-  const videoSrc = 'images/' + work.video;
-  const videoLightbox = document.getElementById('videoLightbox');
-  const lightboxVideo = document.getElementById('lightboxVideo');
-
-  lightboxVideo.src = videoSrc;
-  videoLightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  lightboxVideo.load();
-  lightboxVideo.play().catch(function() {});
-}
-
-function closeVideoLightbox() {
-  const videoLightbox = document.getElementById('videoLightbox');
-  const lightboxVideo = document.getElementById('lightboxVideo');
-  videoLightbox.classList.remove('open');
-  document.body.style.overflow = '';
-  lightboxVideo.pause();
-  setTimeout(function() {
-    lightboxVideo.src = '';
-  }, 300);
 }
 
 // 灯箱事件绑定
@@ -439,25 +395,14 @@ document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target === document.getElementById('lightbox')) closeLightbox();
 });
 
-document.getElementById('videoLightboxClose').addEventListener('click', closeVideoLightbox);
-document.getElementById('videoLightbox').addEventListener('click', function(e) {
-  if (e.target === document.getElementById('videoLightbox')) closeVideoLightbox();
-});
-
 // 键盘控制
 document.addEventListener('keydown', function(e) {
   const lb = document.getElementById('lightbox');
-  const vlb = document.getElementById('videoLightbox');
-  if (!lb.classList.contains('open') && !vlb.classList.contains('open')) return;
+  if (!lb.classList.contains('open')) return;
 
-  if (e.key === 'Escape') {
-    closeLightbox();
-    closeVideoLightbox();
-  }
-  if (lb.classList.contains('open')) {
-    if (e.key === 'ArrowRight') lightboxNext();
-    if (e.key === 'ArrowLeft') lightboxPrev();
-  }
+  if (e.key === 'Escape') { closeLightbox(); }
+  if (e.key === 'ArrowRight') lightboxNext();
+  if (e.key === 'ArrowLeft') lightboxPrev();
 });
 
 // 触摸滑动

@@ -529,7 +529,7 @@ ul {
 /* ---- 分类快捷导航 ---- */
 .section-nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   padding: 40px 24px 60px;
   max-width: 700px;
@@ -1202,7 +1202,8 @@ ul {
   .gallery-grid.cols-3,
   .gallery-grid.cols-4,
   .gallery-grid.cols-5 {
-    column-count: 1;
+    column-count: 2;
+    column-gap: 6px;
   }
 
   .gallery-grid.cols-grid { column-count: 2; column-gap: 6px; }
