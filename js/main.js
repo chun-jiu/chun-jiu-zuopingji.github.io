@@ -172,7 +172,12 @@ function createItemHTML(work, idx) {
   if (isGif) {
     imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else if (work.wallpaper) {
-    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 200w, ' + getThumbPath(work) + ' 400w, images/thumbnails-lg/' + work.file + ' 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 600px, 1200px" alt="' + work.title + '" loading="lazy" decoding="async">';
+    // 桌面端直接显示原图，移动端加载缩略图
+    imgTag = '<picture>' +
+      '<source srcset="' + getImgPath(work) + '" media="(min-width: 769px)">' +
+      '<source srcset="images/thumbnails-lg/' + work.file + '" media="(min-width: 481px)">' +
+      '<img src="' + getThumbPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">' +
+      '</picture>';
   } else {
     imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 144w, ' + getThumbPath(work) + ' 300w" sizes="(max-width: 768px) 144px, 300px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
