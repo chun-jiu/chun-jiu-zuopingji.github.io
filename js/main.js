@@ -168,7 +168,8 @@ function getFilteredWorks() {
 }
 
 function createItemHTML(work, idx) {
-  var imgPath = getThumbPath(work);
+  // GIF 保持原图（动画），其他用缩略图
+  var imgPath = work.file.endsWith('.gif') ? getImgPath(work) : getThumbPath(work);
   const isGif = work.file.endsWith('.gif');
   const isVideo = !!work.video;
   return '<div class="gallery-item fade-in" data-index="' + idx +
