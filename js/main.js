@@ -96,6 +96,10 @@ function getImgPath(work) {
   return 'images/' + work.file;
 }
 
+function getThumbPath(work) {
+  return 'images/thumbnails/' + work.file;
+}
+
 // ============================================================
 // 2. 分类 & 状态
 // ============================================================
@@ -164,7 +168,7 @@ function getFilteredWorks() {
 }
 
 function createItemHTML(work, idx) {
-  var imgPath = getImgPath(work);
+  var imgPath = getThumbPath(work);
   const isGif = work.file.endsWith('.gif');
   const isVideo = !!work.video;
   return '<div class="gallery-item fade-in" data-index="' + idx +
@@ -358,6 +362,7 @@ function openLightbox(index) {
 function updateLightboxImage() {
   if (lightboxIndex < 0 || lightboxIndex >= filteredWorks.length) return;
   const work = filteredWorks[lightboxIndex];
+  // 灯箱用原图
   document.getElementById('lightboxImg').src = getImgPath(work);
   document.getElementById('lightboxImg').alt = work.title;
   document.getElementById('lightboxInfo').textContent =
