@@ -155,7 +155,7 @@ function renderCategoryBar() {
 // ============================================================
 // 4. 画廊 (分批加载)
 // ============================================================
-const BATCH_SIZE = 6;
+const BATCH_SIZE = 4;
 let renderedCount = 0;
 let displayIndex = 0;
 let allFiltered = [];
