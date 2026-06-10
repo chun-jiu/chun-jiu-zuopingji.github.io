@@ -175,7 +175,7 @@ function createItemHTML(work, idx) {
   if (isGif) {
     imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else {
-    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 300w, ' + getThumbPath(work) + ' 600w" sizes="(max-width: 768px) 300px, 600px" alt="' + work.title + '" loading="lazy" decoding="async">';
+    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 200w, ' + getThumbPath(work) + ' 400w" sizes="(max-width: 768px) 200px, 400px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
   return '<div class="gallery-item fade-in" data-index="' + idx +
     '" data-cat="' + work.cat + '"' +

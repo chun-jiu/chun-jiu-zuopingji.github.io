@@ -1205,9 +1205,9 @@ ul {
     column-count: 1;
   }
 
-  .gallery-grid.cols-grid { column-count: 1; }
+  .gallery-grid.cols-grid { column-count: 2; column-gap: 6px; }
 
-  .gallery-grid { padding: 0 8px; }
+  .gallery-grid { padding: 0 4px; }
 
   .cat-btn {
     padding: 6px 14px;
