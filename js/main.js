@@ -172,7 +172,7 @@ function createItemHTML(work, idx) {
   if (isGif) {
     imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else if (work.wallpaper) {
-    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 200w, ' + getThumbPath(work) + ' 400w, images/thumbnails-lg/' + work.file + ' 900w" sizes="(max-width: 480px) 400px, (max-width: 768px) 600px, 900px" alt="' + work.title + '" loading="lazy" decoding="async">';
+    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 200w, ' + getThumbPath(work) + ' 400w, images/thumbnails-lg/' + work.file + ' 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 600px, 1200px" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else {
     imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 144w, ' + getThumbPath(work) + ' 300w" sizes="(max-width: 768px) 144px, 300px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
