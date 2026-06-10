@@ -168,16 +168,21 @@ function getFilteredWorks() {
 }
 
 function createItemHTML(work, idx) {
-  // GIF 保持原图（动画），其他用缩略图
-  var imgPath = work.file.endsWith('.gif') ? getImgPath(work) : getThumbPath(work);
   const isGif = work.file.endsWith('.gif');
   const isVideo = !!work.video;
+  // GIF 保持原图（动画），其他用响应式缩略图
+  var imgTag;
+  if (isGif) {
+    imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
+  } else {
+    imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 300w, ' + getThumbPath(work) + ' 600w" sizes="(max-width: 768px) 300px, 600px" alt="' + work.title + '" loading="lazy" decoding="async">';
+  }
   return '<div class="gallery-item fade-in" data-index="' + idx +
     '" data-cat="' + work.cat + '"' +
     (isVideo ? ' data-video="images/' + work.video + '"' : '') + '>' +
     (isGif && work.cat !== 'illustration' ? '<span class="gif-badge">GIF</span>' : '') +
     '<span class="cat-badge">' + work.catLabel + '</span>' +
-    '<img src="' + imgPath + '" alt="' + work.title + '" loading="lazy" decoding="async">' +
+    imgTag +
     '<div class="gallery-item-overlay">' +
     '<div class="gallery-item-title">' + work.title + '</div>' +
     '<div class="gallery-item-cat">' + work.catLabel + (isVideo ? ' ▶' : '') + '</div>' +
