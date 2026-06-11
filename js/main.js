@@ -8,80 +8,80 @@
 // ============================================================
 const ARTWORKS = [
   // ---- 插画 (30件: 壁纸横图优先) ----
-  { file: '插画/1 (1).png', title: '壁纸插画 01', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (22).png', title: '壁纸插画 02', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (32).png', title: '壁纸插画 03', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (33).png', title: '壁纸插画 04', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (34).png', title: '壁纸插画 05', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (35).png', title: '壁纸插画 06', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (39).png', title: '壁纸插画 07', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (41).png', title: '壁纸插画 08', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (56).png', title: '壁纸插画 09', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (57).png', title: '壁纸插画 10', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (1).gif', title: '插画作品 11', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (30).png', title: '插画作品 12', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (31).png', title: '插画作品 13', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (36).png', title: '插画作品 14', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (37).png', title: '插画作品 15', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (38).png', title: '插画作品 16', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (42).png', title: '插画作品 17', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (43).png', title: '插画作品 18', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (44).png', title: '插画作品 19', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (45).png', title: '插画作品 20', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (46).png', title: '插画作品 21', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (47).png', title: '插画作品 22', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (48).png', title: '插画作品 23', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (49).png', title: '插画作品 24', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (50).png', title: '插画作品 25', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (51).png', title: '插画作品 26', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (52).png', title: '插画作品 27', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (53).png', title: '插画作品 28', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (54).png', title: '插画作品 29', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (55).png', title: '插画作品 30', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (1).webp', title: '壁纸插画 01', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (22).webp', title: '壁纸插画 02', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (32).webp', title: '壁纸插画 03', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (33).webp', title: '壁纸插画 04', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (34).webp', title: '壁纸插画 05', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (35).webp', title: '壁纸插画 06', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (39).webp', title: '壁纸插画 07', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (41).webp', title: '壁纸插画 08', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (56).webp', title: '壁纸插画 09', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (57).webp', title: '壁纸插画 10', cat: 'illustration', catLabel: '插画', wallpaper: true },
+  { file: '插画/1 (1).gif', video: 'video/1 (1)gif.mp4', title: '插画作品 11', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (30).webp', title: '插画作品 12', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (31).webp', title: '插画作品 13', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (36).webp', title: '插画作品 14', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (37).webp', title: '插画作品 15', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (38).webp', title: '插画作品 16', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (42).webp', title: '插画作品 17', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (43).webp', title: '插画作品 18', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (44).webp', title: '插画作品 19', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (45).webp', title: '插画作品 20', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (46).webp', title: '插画作品 21', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (47).webp', title: '插画作品 22', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (48).webp', title: '插画作品 23', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (49).webp', title: '插画作品 24', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (50).webp', title: '插画作品 25', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (51).webp', title: '插画作品 26', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (52).webp', title: '插画作品 27', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (53).webp', title: '插画作品 28', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (54).webp', title: '插画作品 29', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (55).webp', title: '插画作品 30', cat: 'illustration', catLabel: '插画' },
 
-  // ---- 动图 (16件) ----
-  { file: '动图/1 (1).gif', title: '动图作品 01', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (2).gif', title: '动图作品 02', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (3).gif', title: '动图作品 03', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (4).gif', title: '动图作品 04', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (5).gif', title: '动图作品 05', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (6).gif', title: '动图作品 06', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (7).gif', title: '动图作品 07', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (8).gif', title: '动图作品 08', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (9).gif', title: '动图作品 09', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (10).gif', title: '动图作品 10', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (11).gif', title: '动图作品 11', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (12).gif', title: '动图作品 12', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (14).gif', title: '动图作品 13', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (15).gif', title: '动图作品 14', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (16).gif', title: '动图作品 15', cat: 'gif', catLabel: '动图' },
-  { file: '动图/1 (18).gif', title: '动图作品 16', cat: 'gif', catLabel: '动图' },
+  // ---- 动图 (16件) 使用 MP4 视频，加载更快 ----
+  { file: '动图/1 (1).gif', video: 'video/1 (1).mp4', title: '动图作品 01', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (2).gif', video: 'video/1 (2).mp4', title: '动图作品 02', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (3).gif', video: 'video/1 (3).mp4', title: '动图作品 03', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (4).gif', video: 'video/1 (4).mp4', title: '动图作品 04', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (5).gif', video: 'video/1 (5).mp4', title: '动图作品 05', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (6).gif', video: 'video/1 (6).mp4', title: '动图作品 06', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (7).gif', video: 'video/1 (7).mp4', title: '动图作品 07', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (8).gif', video: 'video/1 (8).mp4', title: '动图作品 08', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (9).gif', video: 'video/1 (9).mp4', title: '动图作品 09', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (10).gif', video: 'video/1 (10).mp4', title: '动图作品 10', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (11).gif', video: 'video/1 (11).mp4', title: '动图作品 11', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (12).gif', video: 'video/1 (12).mp4', title: '动图作品 12', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (14).gif', video: 'video/1 (14).mp4', title: '动图作品 13', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (15).gif', video: 'video/1 (15).mp4', title: '动图作品 14', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (16).gif', video: 'video/1 (16).mp4', title: '动图作品 15', cat: 'gif', catLabel: '动图' },
+  { file: '动图/1 (18).gif', video: 'video/1 (18).mp4', title: '动图作品 16', cat: 'gif', catLabel: '动图' },
 
   // ---- 制品 (29件) ----
-  { file: '制品/1 徽章/1.png', title: '徽章 01', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/2.png', title: '徽章 02', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/3.png', title: '徽章 03', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/4.png', title: '徽章 04', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/5.png', title: '徽章 05', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/6.png', title: '徽章 06', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/8.png', title: '徽章 07', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/9.png', title: '徽章 08', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/10.png', title: '徽章 09', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/11.png', title: '徽章 10', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/12.png', title: '徽章 11', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/13.png', title: '徽章 12', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/14.png', title: '徽章 13', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/15.png', title: '徽章 14', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/16.png', title: '徽章 15', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/17.png', title: '徽章 16', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/18.png', title: '徽章 17', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/19.png', title: '徽章 18', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/20.png', title: '徽章 19', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/1 徽章/25.png', title: '徽章 20', cat: 'product', catLabel: '制品', subcat: 'badge' },
-  { file: '制品/3 fumo/1 (1).png', title: 'Fumo 01', cat: 'product', catLabel: '制品', subcat: 'fumo' },
-  { file: '制品/3 fumo/1 (2).png', title: 'Fumo 02', cat: 'product', catLabel: '制品', subcat: 'fumo' },
+  { file: '制品/1 徽章/1.webp', title: '徽章 01', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/2.webp', title: '徽章 02', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/3.webp', title: '徽章 03', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/4.webp', title: '徽章 04', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/5.webp', title: '徽章 05', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/6.webp', title: '徽章 06', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/8.webp', title: '徽章 07', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/9.webp', title: '徽章 08', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/10.webp', title: '徽章 09', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/11.webp', title: '徽章 10', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/12.webp', title: '徽章 11', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/13.webp', title: '徽章 12', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/14.webp', title: '徽章 13', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/15.webp', title: '徽章 14', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/16.webp', title: '徽章 15', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/17.webp', title: '徽章 16', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/18.webp', title: '徽章 17', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/19.webp', title: '徽章 18', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/20.webp', title: '徽章 19', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/1 徽章/25.webp', title: '徽章 20', cat: 'product', catLabel: '制品', subcat: 'badge' },
+  { file: '制品/3 fumo/1 (1).webp', title: 'Fumo 01', cat: 'product', catLabel: '制品', subcat: 'fumo' },
+  { file: '制品/3 fumo/1 (2).webp', title: 'Fumo 02', cat: 'product', catLabel: '制品', subcat: 'fumo' },
   { file: '制品/2 活动/1.jpg', title: '活动 01', cat: 'product', catLabel: '制品', subcat: 'event' },
-  { file: '制品/2 活动/1.png', title: '活动 02', cat: 'product', catLabel: '制品', subcat: 'event' },
+  { file: '制品/2 活动/1.webp', title: '活动 02', cat: 'product', catLabel: '制品', subcat: 'event' },
   { file: '制品/2 活动/Image_1781073442174_759.jpg', title: '活动 03', cat: 'product', catLabel: '制品', subcat: 'event' },
   { file: '制品/2 活动/Image_1781073457561_430.jpg', title: '活动 04', cat: 'product', catLabel: '制品', subcat: 'event' },
   { file: '制品/4 杂项/1 (1).jpg', title: '杂项 01', cat: 'product', catLabel: '制品', subcat: 'other' },
@@ -166,11 +166,11 @@ function getFilteredWorks() {
 }
 
 function createItemHTML(work, idx) {
-  const isGif = work.file.endsWith('.gif');
-  // GIF 保持原图（动画），壁纸用600px缩略图，其他用响应式缩略图
+  const hasVideo = !!work.video;
+  // 动图 → MP4 视频标签，壁纸用600px缩略图，其他用响应式缩略图
   var imgTag;
-  if (isGif) {
-    imgTag = '<img src="' + getImgPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">';
+  if (hasVideo) {
+    imgTag = '<video src="images/' + work.video + '" autoplay loop muted playsinline alt="' + work.title + '" preload="metadata"></video>';
   } else if (work.wallpaper) {
     // 桌面端直接显示原图，移动端加载缩略图
     imgTag = '<picture>' +
@@ -183,7 +183,7 @@ function createItemHTML(work, idx) {
   }
   return '<div class="gallery-item fade-in" data-index="' + idx +
     '" data-cat="' + work.cat + '">' +
-    (isGif && work.cat !== 'illustration' ? '<span class="gif-badge">GIF</span>' : '') +
+    (hasVideo && work.cat !== 'illustration' ? '<span class="gif-badge">GIF</span>' : '') +
     '<span class="cat-badge">' + work.catLabel + '</span>' +
     imgTag +
     '<div class="gallery-item-overlay">' +
@@ -354,7 +354,7 @@ function openLightbox(index) {
   var lb = document.getElementById('lightbox');
   lb.classList.add('open');
   // 动图 / 徽章 → 透明模糊背景
-  var isGifOrBadge = work.file.endsWith('.gif') || (work.subcat === 'badge');
+  var isGifOrBadge = !!work.video || (work.subcat === 'badge');
   lb.classList.toggle('blur-bg', isGifOrBadge);
   document.body.style.overflow = 'hidden';
   updateLightboxImage();
@@ -363,9 +363,22 @@ function openLightbox(index) {
 function updateLightboxImage() {
   if (lightboxIndex < 0 || lightboxIndex >= filteredWorks.length) return;
   const work = filteredWorks[lightboxIndex];
-  // 灯箱用原图
-  document.getElementById('lightboxImg').src = getImgPath(work);
-  document.getElementById('lightboxImg').alt = work.title;
+  const lbImg = document.getElementById('lightboxImg');
+  const lbVideo = document.getElementById('lightboxVideo');
+
+  if (work.video) {
+    // 视频 → 用 video 标签
+    lbImg.style.display = 'none';
+    lbVideo.style.display = '';
+    lbVideo.src = 'images/' + work.video;
+  } else {
+    // 图片 → 用 img 标签
+    lbVideo.style.display = 'none';
+    lbVideo.src = '';
+    lbImg.style.display = '';
+    lbImg.src = getImgPath(work);
+    lbImg.alt = work.title;
+  }
   document.getElementById('lightboxInfo').textContent =
     work.title + ' — ' + work.catLabel;
   document.getElementById('lightboxCounter').textContent =
@@ -379,6 +392,7 @@ function closeLightbox() {
   lightboxIndex = -1;
   setTimeout(function() {
     document.getElementById('lightboxImg').src = '';
+    document.getElementById('lightboxVideo').src = '';
   }, 300);
 }
 

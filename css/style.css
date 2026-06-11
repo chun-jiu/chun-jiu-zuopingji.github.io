@@ -425,14 +425,16 @@ ul {
   z-index: 2;
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.6s var(--ease-out);
 }
 
-.gallery-item:hover img {
+.gallery-item:hover img,
+.gallery-item:hover video {
   transform: scale(1.04);
 }
 
