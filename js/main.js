@@ -7,7 +7,7 @@
 // 1. 作品数据 (来源: 根目录 插画/动图/制品/视频)
 // ============================================================
 const ARTWORKS = [
-  // ---- 插画 (30件: 壁纸横图优先) ----
+  // ---- 插画 (29件: 壁纸横图优先) ----
   { file: '插画/1 (1).webp', title: '壁纸插画 01', cat: 'illustration', catLabel: '插画', wallpaper: true },
   { file: '插画/1 (22).webp', title: '壁纸插画 02', cat: 'illustration', catLabel: '插画', wallpaper: true },
   { file: '插画/1 (32).webp', title: '壁纸插画 03', cat: 'illustration', catLabel: '插画', wallpaper: true },
@@ -18,26 +18,25 @@ const ARTWORKS = [
   { file: '插画/1 (41).webp', title: '壁纸插画 08', cat: 'illustration', catLabel: '插画', wallpaper: true },
   { file: '插画/1 (56).webp', title: '壁纸插画 09', cat: 'illustration', catLabel: '插画', wallpaper: true },
   { file: '插画/1 (57).webp', title: '壁纸插画 10', cat: 'illustration', catLabel: '插画', wallpaper: true },
-  { file: '插画/1 (1).gif', video: 'video/1 (1)gif.mp4', title: '插画作品 11', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (30).webp', title: '插画作品 12', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (31).webp', title: '插画作品 13', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (36).webp', title: '插画作品 14', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (37).webp', title: '插画作品 15', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (38).webp', title: '插画作品 16', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (42).webp', title: '插画作品 17', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (43).webp', title: '插画作品 18', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (44).webp', title: '插画作品 19', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (45).webp', title: '插画作品 20', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (46).webp', title: '插画作品 21', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (47).webp', title: '插画作品 22', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (48).webp', title: '插画作品 23', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (49).webp', title: '插画作品 24', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (50).webp', title: '插画作品 25', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (51).webp', title: '插画作品 26', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (52).webp', title: '插画作品 27', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (53).webp', title: '插画作品 28', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (54).webp', title: '插画作品 29', cat: 'illustration', catLabel: '插画' },
-  { file: '插画/1 (55).webp', title: '插画作品 30', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (30).webp', title: '插画作品 11', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (31).webp', title: '插画作品 12', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (36).webp', title: '插画作品 13', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (37).webp', title: '插画作品 14', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (38).webp', title: '插画作品 15', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (42).webp', title: '插画作品 16', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (43).webp', title: '插画作品 17', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (44).webp', title: '插画作品 18', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (45).webp', title: '插画作品 19', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (46).webp', title: '插画作品 20', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (47).webp', title: '插画作品 21', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (48).webp', title: '插画作品 22', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (49).webp', title: '插画作品 23', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (50).webp', title: '插画作品 24', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (51).webp', title: '插画作品 25', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (52).webp', title: '插画作品 26', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (53).webp', title: '插画作品 27', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (54).webp', title: '插画作品 28', cat: 'illustration', catLabel: '插画' },
+  { file: '插画/1 (55).webp', title: '插画作品 29', cat: 'illustration', catLabel: '插画' },
 
   // ---- 动图 (16件) 使用 MP4 视频，加载更快 ----
   { file: '动图/1 (1).gif', video: 'video/1 (1).mp4', title: '动图作品 01', cat: 'gif', catLabel: '动图' },
@@ -167,16 +166,13 @@ function getFilteredWorks() {
 
 function createItemHTML(work, idx) {
   const hasVideo = !!work.video;
-  // 动图 → MP4 视频标签，壁纸用600px缩略图，其他用响应式缩略图
+  // 动图 → MP4 视频标签；壁纸 → WebP缩略图(浏览)/PNG原图(灯箱)；其他 → 响应式缩略图
   var imgTag;
   if (hasVideo) {
     imgTag = '<video src="images/' + work.video + '" autoplay loop muted playsinline alt="' + work.title + '" preload="metadata"></video>';
   } else if (work.wallpaper) {
-    // 桌面+平板加载原始PNG无损画质，手机加载WebP缩略图
-    imgTag = '<picture>' +
-      '<source srcset="' + getImgPath(work).replace('.webp', '.png') + '" media="(min-width: 481px)">' +
-      '<img src="' + getThumbPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">' +
-      '</picture>';
+    // 画廊显示高质量WebP缩略图（快），data-full 存 PNG 原图路径供灯箱使用
+    imgTag = '<img src="images/thumbnails-lg/' + work.file + '" data-full="' + getImgPath(work).replace('.webp', '.png') + '" alt="' + work.title + '" loading="lazy" decoding="async">';
   } else {
     imgTag = '<img src="' + getThumbPath(work) + '" srcset="images/thumbnails-sm/' + work.file + ' 144w, ' + getThumbPath(work) + ' 300w" sizes="(max-width: 768px) 144px, 300px" alt="' + work.title + '" loading="lazy" decoding="async">';
   }
@@ -371,11 +367,15 @@ function updateLightboxImage() {
     lbVideo.style.display = '';
     lbVideo.src = 'images/' + work.video;
   } else {
-    // 图片 → 用 img 标签
+    // 图片：壁纸加载PNG原图，其他加载WebP
     lbVideo.style.display = 'none';
     lbVideo.src = '';
     lbImg.style.display = '';
-    lbImg.src = getImgPath(work);
+    if (work.wallpaper) {
+      lbImg.src = getImgPath(work).replace('.webp', '.png');
+    } else {
+      lbImg.src = getImgPath(work);
+    }
     lbImg.alt = work.title;
   }
   document.getElementById('lightboxInfo').textContent =
