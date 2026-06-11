@@ -196,7 +196,11 @@ function insertProductSpacers(works) {
   works.forEach(function(w) {
     const sc = w.subcat || '';
     if (lastSubcat && sc !== lastSubcat) {
-      result.push({ type: 'spacer', cat: 'product', catLabel: '制品' });
+      // 活动和杂项之间不加间隔
+      var skipSpacer = (sc === 'other' && lastSubcat === 'event') || (sc === 'event' && lastSubcat === 'other');
+      if (!skipSpacer) {
+        result.push({ type: 'spacer', cat: 'product', catLabel: '制品' });
+      }
     }
     result.push(w);
     lastSubcat = sc;
