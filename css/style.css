@@ -37,7 +37,7 @@
   --space-xl: 8rem;
 
   /* 尺寸 */
-  --max-width: 1200px;
+  --max-width: 1400px;
   --nav-height: 64px;
 
   /* 圆角 */
@@ -367,8 +367,8 @@ ul {
 
 .gallery-grid {
   column-gap: 12px;
-  padding: 0 20px;
-  max-width: 1000px;
+  padding: 0 12px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
