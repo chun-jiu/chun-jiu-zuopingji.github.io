@@ -172,10 +172,9 @@ function createItemHTML(work, idx) {
   if (hasVideo) {
     imgTag = '<video src="images/' + work.video + '" autoplay loop muted playsinline alt="' + work.title + '" preload="metadata"></video>';
   } else if (work.wallpaper) {
-    // 桌面端加载原始PNG无损画质，移动端加载WebP缩略图
+    // 桌面+平板加载原始PNG无损画质，手机加载WebP缩略图
     imgTag = '<picture>' +
-      '<source srcset="' + getImgPath(work).replace('.webp', '.png') + '" media="(min-width: 769px)">' +
-      '<source srcset="images/thumbnails-lg/' + work.file + '" media="(min-width: 481px)">' +
+      '<source srcset="' + getImgPath(work).replace('.webp', '.png') + '" media="(min-width: 481px)">' +
       '<img src="' + getThumbPath(work) + '" alt="' + work.title + '" loading="lazy" decoding="async">' +
       '</picture>';
   } else {
