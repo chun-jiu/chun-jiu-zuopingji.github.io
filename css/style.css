@@ -224,53 +224,71 @@ ul {
 
 /* ---- Hero 区域 ---- */
 #hero {
-  padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-xl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
+  padding: var(--nav-height) var(--space-sm) var(--space-md);
   position: relative;
 }
 
 #heroContent {
-  transition: transform 0.1s ease-out;
+  transition: transform 0.15s ease-out;
   will-change: transform;
+  max-width: 640px;
 }
 
 .hero-tag {
   display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
   border: 1px solid var(--color-accent-light);
-  padding: 4px 16px;
+  padding: 5px 20px;
   border-radius: 20px;
-  margin-bottom: var(--space-md);
+  margin-bottom: clamp(32px, 5vh, 48px);
 }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  line-height: 1.3;
+.hero-name {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: 0.25em;
   color: var(--color-text);
-  margin-bottom: var(--space-sm);
+  line-height: 1.15;
+  margin-bottom: clamp(20px, 3vh, 32px);
 }
 
-.hero h1 strong {
-  font-weight: 600;
+.hero-line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-accent-light);
+  margin: 0 auto clamp(20px, 3vh, 32px);
 }
 
-.hero p {
-  font-size: 1.1rem;
+.hero-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  color: var(--color-text-lighter);
+  margin-bottom: clamp(36px, 6vh, 56px);
+}
+
+.hero-desc {
+  font-size: 1rem;
   color: var(--color-text-light);
-  max-width: 480px;
+  line-height: 2;
+  max-width: 560px;
   margin: 0 auto;
-  line-height: 1.8;
 }
 
 .scroll-indicator {
-  margin-top: clamp(40px, 8vh, 80px);
+  position: absolute;
+  bottom: clamp(28px, 5vh, 48px);
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,8 +300,8 @@ ul {
 }
 
 @keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(8px); }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(8px); }
 }
 
 /* ---- Section Header ---- */
@@ -1196,7 +1214,8 @@ ul {
   .float-btn { width: 38px; height: 38px; }
   .float-btn:hover { width: auto; padding: 0 12px; border-radius: 20px; }
 
-  .hero h1 { font-size: 1.8rem; }
+  .hero-name { font-size: 2.4rem; letter-spacing: 0.18em; }
+  .hero-desc { max-width: 100%; padding: 0 8px; }
 }
 
 /* 小手机 (≤480px) */
